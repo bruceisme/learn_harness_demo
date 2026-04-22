@@ -2,7 +2,7 @@
 
 ## 概述
 
-s19_v2 在 s18_v2_singleagent_worktree_task_isolation.py 的基础上集成了 **MCP (Model Context Protocol)** 和 **Plugin System**。核心改动是新增 MCP 客户端、插件发现机制、工具路由和统一权限门，使主代理能够调用外部 MCP 服务器提供的工具。
+s19_v2 在 s18_v2_worktree.py 的基础上集成了 **MCP (Model Context Protocol)** 和 **Plugin System**。核心改动是新增 MCP 客户端、插件发现机制、工具路由和统一权限门，使主代理能够调用外部 MCP 服务器提供的工具。
 
 ### 核心改进
 
@@ -16,8 +16,8 @@ s19_v2 在 s18_v2_singleagent_worktree_task_isolation.py 的基础上集成了 *
 ### 代码文件路径
 
 - **源代码**：`v1_task_manager/chapter_19_2/s19_v2_mcp_plugin.py`
-- **参考文档**：`v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation_文档.md`
-- **参考代码**：`v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py`
+- **参考文档**：`v1_task_manager/chapter_18_2/s18_v2_worktree_文档.md`
+- **参考代码**：`v1_task_manager/chapter_18_2/s18_v2_worktree.py`
 - **插件清单**：`.claude-plugin/plugin.json`
 - **MCP 工具命名**：`mcp__{server_name}__{tool_name}`
 

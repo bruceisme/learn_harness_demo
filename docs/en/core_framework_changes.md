@@ -2303,8 +2303,8 @@ Capiter 14 Introduction定时任务Scheduler，SupportStandard Cron Express。Cr
 
 ## Capiter 18_2: Worktree Isolation
 
-**File Path**: `code/v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py` 
-**Full Analysis**: `docs/zh/chapter_18_2/s18_v2_singleagent_worktree_task_isolation_Document.md`
+**File Path**: `code/v1_task_manager/chapter_18_2/s18_v2_worktree.py` 
+**Full Analysis**: `docs/zh/chapter_18_2/s18_v2_worktree_Document.md`
 
 ### Core Components
 

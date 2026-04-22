@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-s18_v2_singleagent_worktree_task_isolation.py - Single Agent with Worktree Task Isolation
+s18_v2_worktree.py - Single Agent with Worktree Task Isolation
 
 Reference: learn-claude-code (https://github.com/shareAI-lab/learn-claude-code)
 License: MIT License
@@ -22,8 +22,8 @@ Features:
     - Event logging: Worktree events appended to .worktrees/events.jsonl
 
 Documentation:
-    - Chinese: docs/zh/chapter_18_2/s18_v2_singleagent_worktree_task_isolation_文档.md
-    - English: docs/en/chapter_18_2/s18_v2_singleagent_worktree_task_isolation_doc.md
+    - Chinese: docs/zh/chapter_18_2/s18_v2_worktree_文档.md
+    - English: docs/en/chapter_18_2/s18_v2_worktree_doc.md
 """
 import os
 import os,json,re,random

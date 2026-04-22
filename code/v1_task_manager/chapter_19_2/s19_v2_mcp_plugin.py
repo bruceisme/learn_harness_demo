@@ -6,7 +6,7 @@ s19_v2_mcp_plugin.py - Single Agent with MCP & Plugin System
 Reference: learn-claude-code (https://github.com/shareAI-lab/learn-claude-code)
 License: MIT License
 
-This module extends s18_v2_singleagent_worktree_task_isolation.py with MCP (Model Context Protocol) and plugin system.
+This module extends s18_v2_worktree.py with MCP (Model Context Protocol) and plugin system.
 It demonstrates MCP client integration, plugin discovery, and unified permission gating.
 
 Features:

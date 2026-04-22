@@ -8,7 +8,7 @@
 
 Existing Chapters：
 - `chapter_1` 至 `chapter_14`（Continuous）
-- `chapter_18_2`（s18_v2_singleagent_worktree_task_isolation.py）
+- `chapter_18_2`（s18_v2_worktree.py）
 - `chapter_19_2`（s19_v2_mcp_plugin.py）
 
 Note：`chapter_15` 至 `chapter_17` Does Not Exist in This Directory。
@@ -33,7 +33,7 @@ Note：`chapter_15` 至 `chapter_17` Does Not Exist in This Directory。
 | chapter_12 | s12_task_system.py | Prompt LabelFrom "Todo" Change to "Tasks" |
 | chapter_13 | s13_v2_backtask.py | Same as chapter_12 Basically Consistent |
 | chapter_14 | s14_cron_scheduler.py | Event-driven Architecture，Multi-threaded Event Queue |
-| chapter_18_2 | s18_v2_singleagent_worktree_task_isolation.py | Worktree Information Display |
+| chapter_18_2 | s18_v2_worktree.py | Worktree Information Display |
 | chapter_19_2 | s19_v2_mcp_plugin.py | MCP Plugin Initialization，`/tools`、`/mcp` Commands |
 
 ---
@@ -411,7 +411,7 @@ finally:
 
 ### Capiter 18_2：Worktree 任务Isolation
 
-**File**：`chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py`
+**File**：`chapter_18_2/s18_v2_worktree.py`
 
 **New Content**：
 

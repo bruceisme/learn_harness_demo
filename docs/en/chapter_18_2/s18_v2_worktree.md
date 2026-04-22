@@ -1,4 +1,4 @@
-# s18_v2_singleagent_worktree_task_isolation: Worktree Task Isolation System
+# s18_v2_worktree: Worktree Task Isolation System
 
 ## Overview
 
@@ -19,7 +19,7 @@ s18_v2 enhances the **task execution environment isolation capability** based on
 
 ### Code File Paths
 
-- **Source code**: v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py
+- **Source code**: v1_task_manager/chapter_18_2/s18_v2_worktree.py
 - **Reference document**: v1_task_manager/chapter_14/s14_cron_scheduler_文档.md
 - **Reference code**: v1_task_manager/chapter_14/s14_cron_scheduler.py
 - **Worktree index file**: `.worktrees/index.json`
@@ -36,7 +36,7 @@ s18_v2 enhances the **task execution environment isolation capability** based on
 
 ## Comparison with s14 (Change Overview)
 
-| Component | s14_cron_scheduler | s18_v2_singleagent_worktree_task_isolation | Change Description |
+| Component | s14_cron_scheduler | s18_v2_worktree | Change Description |
 |-----------|-------------------|-------------------------------------------|-------------------|
 | Git repository detection | None | detect_repo_root() | New automatic git repository root detection |
 | Event logging | None | EventBus class | New worktree lifecycle event logging |
@@ -903,7 +903,7 @@ s18_v2 fully retains s14's core components:
 
 ### Change Content
 
-| Component | s14_cron_scheduler | s18_v2_singleagent_worktree_task_isolation |
+| Component | s14_cron_scheduler | s18_v2_worktree |
 |-----------|-------------------|-------------------------------------------|
 | Git repository detection | None | detect_repo_root() |
 | Event logging | None | EventBus class |
@@ -926,7 +926,7 @@ For detailed description of s14 scheduled task scheduling system, refer to: v1_t
 
 ```bash
 cd v1_task_manager/chapter_18_2
-python s18_v2_singleagent_worktree_task_isolation.py
+python s18_v2_worktree.py
 ```
 
 ### Worktree Usage Examples
@@ -1033,7 +1033,7 @@ Returns: JSON list of recent 20 events
 
 ```bash
 # Start program
-python s18_v2_singleagent_worktree_task_isolation.py
+python s18_v2_worktree.py
 
 # Create task
 /task_create subject="Test feature" description="Test worktree functionality"
@@ -1085,7 +1085,7 @@ cat .tasks/task_1.json
 # Start in non-git-repository directory
 mkdir /tmp/test-non-git
 cd /tmp/test-non-git
-python /path/to/s18_v2_singleagent_worktree_task_isolation.py
+python /path/to/s18_v2_worktree.py
 
 # Output should contain:
 # [Repo root: /tmp/test-non-git]
@@ -1193,7 +1193,7 @@ s18_v2 implements task physical isolation execution environment based on git wor
 
 ### Version Notes
 
-- **File path**: v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py
+- **File path**: v1_task_manager/chapter_18_2/s18_v2_worktree.py
 - **Core changes**: worktree task isolation system
 - **Inherited content**: s14 core components fully retained (CronScheduler, BackgroundManager, TaskManager enhanced, Memory, Hook, etc.)
 - **Theme**: Task execution environment physical isolation
@@ -1202,4 +1202,4 @@ s18_v2 implements task physical isolation execution environment based on git wor
 ---
 
 *Document version: v1.0*
-*Based on code: v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py*
+*Based on code: v1_task_manager/chapter_18_2/s18_v2_worktree.py*

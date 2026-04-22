@@ -2,7 +2,7 @@
 
 ## Overview
 
-s19_v2 integrates **MCP (Model Context Protocol)** and **Plugin System** based on s18_v2_singleagent_worktree_task_isolation.py. The core changes are the addition of MCP client, plugin discovery mechanism, tool routing, and unified permission gate, enabling the main agent to call tools provided by external MCP servers.
+s19_v2 integrates **MCP (Model Context Protocol)** and **Plugin System** based on s18_v2_worktree.py. The core changes are the addition of MCP client, plugin discovery mechanism, tool routing, and unified permission gate, enabling the main agent to call tools provided by external MCP servers.
 
 ### Core Improvements
 
@@ -16,8 +16,8 @@ s19_v2 integrates **MCP (Model Context Protocol)** and **Plugin System** based o
 ### Code File Paths
 
 - **Source code**: `v1_task_manager/chapter_19_2/s19_v2_mcp_plugin.py`
-- **Reference document**: `v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation_文档.md`
-- **Reference code**: `v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py`
+- **Reference document**: `v1_task_manager/chapter_18_2/s18_v2_worktree_文档.md`
+- **Reference code**: `v1_task_manager/chapter_18_2/s18_v2_worktree.py`
 - **Plugin manifest**: `.claude-plugin/plugin.json`
 - **MCP tool naming**: `mcp__{server_name}__{tool_name}`
 

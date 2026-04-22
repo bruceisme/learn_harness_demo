@@ -1,4 +1,4 @@
-# s18_v2_singleagent_worktree_task_isolation: Worktree 任务隔离系统
+# s18_v2_worktree: Worktree 任务隔离系统
 
 ## 概述
 
@@ -19,7 +19,7 @@ s18_v2 在 s14 定时任务调度系统的基础上进行了**任务执行环境
 
 ### 代码文件路径
 
-- **源代码**：v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py
+- **源代码**：v1_task_manager/chapter_18_2/s18_v2_worktree.py
 - **参考文档**：v1_task_manager/chapter_14/s14_cron_scheduler_文档.md
 - **参考代码**：v1_task_manager/chapter_14/s14_cron_scheduler.py
 - **Worktree 索引文件**：`.worktrees/index.json`
@@ -36,7 +36,7 @@ s18_v2 在 s14 定时任务调度系统的基础上进行了**任务执行环境
 
 ## 与 s14 的对比（变更总览）
 
-| 组件 | s14_cron_scheduler | s18_v2_singleagent_worktree_task_isolation | 变化说明 |
+| 组件 | s14_cron_scheduler | s18_v2_worktree | 变化说明 |
 |------|-------------------|-------------------------------------------|----------|
 | Git 仓库检测 | 无 | detect_repo_root() | 新增自动检测 git 仓库根目录 |
 | 事件日志 | 无 | EventBus 类 | 新增 worktree 生命周期事件日志 |
@@ -1008,7 +1008,7 @@ s18_v2 完整保留 s14 的核心组件：
 
 ### 变更内容
 
-| 组件 | s14_cron_scheduler | s18_v2_singleagent_worktree_task_isolation |
+| 组件 | s14_cron_scheduler | s18_v2_worktree |
 |------|-------------------|-------------------------------------------|
 | Git 仓库检测 | 无 | detect_repo_root() |
 | 事件日志 | 无 | EventBus 类 |
@@ -1031,7 +1031,7 @@ s18_v2 完整保留 s14 的核心组件：
 
 ```bash
 cd v1_task_manager/chapter_18_2
-python s18_v2_singleagent_worktree_task_isolation.py
+python s18_v2_worktree.py
 ```
 
 ### Worktree 使用示例
@@ -1138,7 +1138,7 @@ python s18_v2_singleagent_worktree_task_isolation.py
 
 ```bash
 # 启动程序
-python s18_v2_singleagent_worktree_task_isolation.py
+python s18_v2_worktree.py
 
 # 创建任务
 /task_create subject="测试功能" description="测试 worktree 功能"
@@ -1190,7 +1190,7 @@ cat .tasks/task_1.json
 # 在非 git 仓库目录启动
 mkdir /tmp/test-non-git
 cd /tmp/test-non-git
-python /path/to/s18_v2_singleagent_worktree_task_isolation.py
+python /path/to/s18_v2_worktree.py
 
 # 输出应包含：
 # [Repo root: /tmp/test-non-git]
@@ -1298,7 +1298,7 @@ s18_v2 通过引入 WorktreeManager 和 EventBus，实现了基于 git worktree 
 
 ### 版本说明
 
-- **文件路径**：v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py
+- **文件路径**：v1_task_manager/chapter_18_2/s18_v2_worktree.py
 - **核心改动**：worktree 任务隔离系统
 - **继承内容**：s14 核心组件完整保留（CronScheduler、BackgroundManager、TaskManager 增强、Memory、Hook 等）
 - **主题**：任务执行环境物理隔离
@@ -1307,4 +1307,4 @@ s18_v2 通过引入 WorktreeManager 和 EventBus，实现了基于 git worktree 
 ---
 
 *文档版本：v1.0*
-*基于代码：v1_task_manager/chapter_18_2/s18_v2_singleagent_worktree_task_isolation.py*
+*基于代码：v1_task_manager/chapter_18_2/s18_v2_worktree.py*

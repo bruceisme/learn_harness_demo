@@ -55,7 +55,7 @@ learn_harness_demo/
 | Chapter 12 | 任务系统 | 任务调度管理 | `s12_task_system.py` | [文档](docs/zh/chapter_12/s12_task_system_文档.md) | [Doc](docs/en/chapter_12/s12_task_system_doc.md) |
 | Chapter 13 | 知识系统 | 知识库管理 | `s13_v2_backtask.py` | [文档](docs/zh/chapter_13/s13_v2_backtask_文档.md) | [Doc](docs/en/chapter_13/s13_v2_backtask_doc.md) |
 | Chapter 14 | 计划系统 | 规划和执行 | `s14_cron_scheduler.py` | [文档](docs/zh/chapter_14/s14_cron_scheduler_文档.md) | [Doc](docs/en/chapter_14/s14_cron_scheduler_doc.md) |
-| Chapter 18.2 | Worktree 任务隔离系统 | git worktree 全生命周期管理 | `s18_v2_singleagent_worktree_task_isolation.py` | [文档](docs/zh/chapter_18_2/s18_v2_singleagent_worktree_task_isolation_文档.md) | [Doc](docs/en/chapter_18_2/s18_v2_singleagent_worktree_task_isolation_doc.md) |
+| Chapter 18.2 | Worktree 任务隔离系统 | git worktree 全生命周期管理 | `s18_v2_worktree.py` | [文档](docs/zh/chapter_18_2/s18_v2_worktree_文档.md) | [Doc](docs/en/chapter_18_2/s18_v2_worktree_doc.md) |
 | Chapter 19.2 | MCP & Plugin 系统集成 | MCP 和插件系统集成 | `s19_v2_mcp_plugin.py` | [文档](docs/zh/chapter_19_2/s19_mcp_plugin.md) | [Doc](docs/en/chapter_19_2/s19_mcp_plugin.md) |
 
 ## 快速开始
