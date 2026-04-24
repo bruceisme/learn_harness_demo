@@ -2842,5 +2842,3 @@ if __name__ == "__main__":
             except Exception:
                 pass
         print("\n[Bye]")
-
-#现在观察到，主agent调用子agent时不会把合适的上下文信息告知，导致重复读文件分析

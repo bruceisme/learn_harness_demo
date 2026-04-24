@@ -7,7 +7,7 @@
 ## Directory Structure
 
 Existing Chapters：
-- `chapter_1` 至 `chapter_14`（Continuous）
+- `chapter_01` 至 `chapter_14`（Continuous）
 - `chapter_18_2`（s18_v2_worktree.py）
 - `chapter_19_2`（s19_v2_mcp_plugin.py）
 
@@ -19,15 +19,15 @@ Note：`chapter_15` 至 `chapter_17` Does Not Exist in This Directory。
 
 | Chapter | File Name | Main Script Layer Changes |
 |------|--------|---------------|
-| chapter_1 | agent_loop.py | Basic Interactive Loop |
-| chapter_2 | s02_tool_use.py | Same as chapter_1 Basically Consistent |
-| chapter_3 | s03_skill_loading.py | Same as chapter_1 Basically Consistent |
-| chapter_4 | s04_todo_write.py | Same as chapter_1 Basically Consistent |
-| chapter_5 | s05_subagent.py | Output Processing Enhancement，Color Printing |
-| chapter_6 | s06_context.py | Context Compression State Retention |
-| chapter_7 | s07_permission_system.py | Permission Mode Selection，Runtime Commands `/mode`、`/rules` |
-| chapter_8 | s08_hook_system.py | Dynamic Authorization Command `/allow` |
-| chapter_9 | s09_memory_system.py | Memory Loading，`/memories` Commands |
+| chapter_01 | s01_agent_loop.py | Basic Interactive Loop |
+| chapter_02 | s02_tool_use.py | Same as chapter_01 Basically Consistent |
+| chapter_03 | s03_skill_loading.py | Same as chapter_01 Basically Consistent |
+| chapter_04 | s04_todo_write.py | Same as chapter_01 Basically Consistent |
+| chapter_05 | s05_subagent.py | Output Processing Enhancement，Color Printing |
+| chapter_06 | s06_context.py | Context Compression State Retention |
+| chapter_07 | s07_permission_system.py | Permission Mode Selection，Runtime Commands `/mode`、`/rules` |
+| chapter_08 | s08_hook_system.py | Dynamic Authorization Command `/allow` |
+| chapter_09 | s09_memory_system.py | Memory Loading，`/memories` Commands |
 | chapter_10 | s10_build_system.py | System Prompt Builder `prompt_builder.main_build()` |
 | chapter_11 | s11_Resume_system.py | Dynamic Prompt（Todo Progress），`/clear` Commands |
 | chapter_12 | s12_task_system.py | Prompt LabelFrom "Todo" Change to "Tasks" |
@@ -43,10 +43,10 @@ Note：`chapter_15` 至 `chapter_17` Does Not Exist in This Directory。
 ### Capiter 1-4：Basic Interactive Loop
 
 **File**：
-- `chapter_1/agent_loop.py`
-- `chapter_2/s02_tool_use.py`
-- `chapter_3/s03_skill_loading.py`
-- `chapter_4/s04_todo_write.py`
+- `chapter_01/s01_agent_loop.py`
+- `chapter_02/s02_tool_use.py`
+- `chapter_03/s03_skill_loading.py`
+- `chapter_04/s04_todo_write.py`
 
 **Script Layer Code Structure**：
 
@@ -83,13 +83,13 @@ if __name__ == "__main__":
 
 **Evolution Description**：
 - The Script Layer Logic of These Four Chapters is Basically Consistent
-- Main Changes Occur at Core Logic Layer（Such as chapter_4 Introduction TodoManager），But Script Layer Entry Code Remains Unchanged
+- Main Changes Occur at Core Logic Layer（Such as chapter_04 Introduction TodoManager），But Script Layer Entry Code Remains Unchanged
 
 ---
 
 ### Capiter 5：Output Processing Enhancement
 
-**File**：`chapter_5/s05_subagent.py`
+**File**：`chapter_05/s05_subagent.py`
 
 **New Content**：
 
@@ -106,7 +106,7 @@ print(f"\033[32m[最终回复]\033[0m {final_text}")
 
 ### Capiter 6：Context Compression State Retention
 
-**File**：`chapter_6/s06_context.py`
+**File**：`chapter_06/s06_context.py`
 
 **New Content**：
 
@@ -125,7 +125,7 @@ history = state.messages  # 使用 state.messages 而非直接赋值
 
 ### Capiter 7：权限模Control
 
-**File**：`chapter_7/s07_permission_system.py`
+**File**：`chapter_07/s07_permission_system.py`
 
 **New Content**：
 
@@ -161,7 +161,7 @@ if query.strip() == "/rules":
 
 ### Capiter 8：Dynamic Authorization Command
 
-**File**：`chapter_8/s08_hook_system.py`
+**File**：`chapter_08/s08_hook_system.py`
 
 **New Content**：
 
@@ -189,7 +189,7 @@ if query.startswith("/allow"):
 
 ### Capiter 9：Memory System初始化
 
-**File**：`chapter_9/s09_memory_system.py`
+**File**：`chapter_09/s09_memory_system.py`
 
 **New Content**：
 
@@ -552,16 +552,16 @@ finally:
 
 ### Architecture演进路线
 
-1. **Stage 1（chapter_1-4）**：Basic Interactive Loop
+1. **Stage 1（chapter_01-4）**：Basic Interactive Loop
  - Simple `while input()` 同步Loop
  - 无Runtime Commands，OnlySupport `q`/`exit` Exit
 
-2. **Stage 2（chapter_5-9）**：FunctionEnhance期
- - 彩色Output（chapter_5）
- - Context Compression State Retention（chapter_6）
- - 权限模Control（chapter_7）
- - 动态Authorization（chapter_8）
- - Memory System（chapter_9）
+2. **Stage 2（chapter_05-9）**：FunctionEnhance期
+ - 彩色Output（chapter_05）
+ - Context Compression State Retention（chapter_06）
+ - 权限模Control（chapter_07）
+ - 动态Authorization（chapter_08）
+ - Memory System（chapter_09）
  - 斜杠CommandsSystem逐步Establish
 
 3. **Stage 3（chapter_10-13）**：System完善期
@@ -585,11 +585,11 @@ finally:
 
 | Commands | IntroductionChapter | Function |
 |------|----------|------|
-| `q`/`exit` | chapter_1 | Exit会话 |
-| `/mode <mode>` | chapter_7 | 切换权限模（default/plan/auto） |
-| `/rules` | chapter_7 | 查看权限RulesList |
-| `/allow <path>` | chapter_8 | 动态AuthorizationTable of Contents写权限 |
-| `/memories` | chapter_9 | 列出已加载 记忆 |
+| `q`/`exit` | chapter_01 | Exit会话 |
+| `/mode <mode>` | chapter_07 | 切换权限模（default/plan/auto） |
+| `/rules` | chapter_07 | 查看权限RulesList |
+| `/allow <path>` | chapter_08 | 动态AuthorizationTable of Contents写权限 |
+| `/memories` | chapter_09 | 列出已加载 记忆 |
 | `/clear` | chapter_11 | 清空会话State（历史、任务、压缩State） |
 | `/cron` | chapter_14 | 查看定时任务List |
 | `/test` | chapter_14 | 触发Test cron 事件 |
@@ -617,7 +617,7 @@ finally:
 
 ## 结语
 
-From chapter_1 to chapter_19_2，脚本层经历了FromSimple交互LooptoComplexEvent-driven Architecture 演变。核心改动Including：
+From chapter_01 to chapter_19_2，脚本层经历了FromSimple交互LooptoComplexEvent-driven Architecture 演变。核心改动Including：
 
 1. 交互模：同步 `input()` → 异步事件队列
 2. CommandsSystem：无Commands → 10+ 斜杠Commands

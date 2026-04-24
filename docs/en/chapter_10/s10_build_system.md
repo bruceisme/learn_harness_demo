@@ -31,7 +31,7 @@ s10 builds upon the s09 memory system with a **structured system prompt reconstr
 ### Code File Paths
 
 - **Source Code**: v1_task_manager/chapter_10/s10_build_system.py
-- **Reference Documentation**: v1_task_manager/chapter_9/s09_memory_system_文档.md
+- **Reference Documentation**: v1_task_manager/chapter_09/s09_memory_system_文档.md
 - **Memory Directory**: `.memory/` (hidden directory under workspace root)
 - **Skills Directory**: `skills/` (under workspace root)
 - **Hook Configuration**: `.hooks.json` (hook interception pipeline configuration file under workspace root)
@@ -511,7 +511,7 @@ The following functionality is fully preserved in s10 with no logic changes:
 | /memories Command | View memory list | Fully preserved |
 | /mode, /rules, /allow Commands | Permission management commands | Fully preserved |
 
-For detailed content, please refer to v1_task_manager/chapter_9/s09_memory_system_文档.md.
+For detailed content, please refer to v1_task_manager/chapter_09/s09_memory_system_文档.md.
 
 ---
 
@@ -721,7 +721,7 @@ s10 fully preserves all core functionality from s09, the following components ha
 - **Skill Registration**: SkillRegistry loading logic unchanged
 - **Task Management**: TodoManager logic unchanged
 
-For detailed content, please refer to v1_task_manager/chapter_9/s09_memory_system_文档.md.
+For detailed content, please refer to v1_task_manager/chapter_09/s09_memory_system_文档.md.
 
 ### New Content
 
